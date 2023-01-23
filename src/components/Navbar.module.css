@@ -1,0 +1,21 @@
+.header{
+    background: var(--gray-700);
+
+    padding: 4.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h1{
+    margin-left: 0.75rem;
+    color: var(--purple-500);
+
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.header h1 span{
+    color: var(--blue-100);
+}

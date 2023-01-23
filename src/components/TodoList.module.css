@@ -1,0 +1,125 @@
+.listaTarefasContainer{
+    margin-top: -1.6rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.criarTarefaForm{
+    width: 100%;
+    display: flex;
+
+    gap: 0.5rem;
+}
+
+.criarTarefaForm input{
+   background: var(--gray-500);
+   outline: none;
+   border: 1px solid var(--gray-700);
+   border-radius: 8px;
+
+   padding: 1rem;
+   color: var(--gray-300);
+
+   flex: 1;
+}
+
+.criarTarefaForm button[type=submit]{
+    color: var(--gray-100);
+    border: none;
+    outline: none;
+    background: var(--blue-500);
+    padding: 1rem;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    font-size: 0.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    line-height: 1;
+
+}
+
+.criarTarefaForm button[type=submit] svg{
+    margin-left: 0.5rem;
+}
+
+.cabecalhoLista{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 0.875rem;
+    font-weight: bold;
+
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.cabecalhoLista strong:first-child{
+    color: var(--blue-100);
+}
+
+.cabecalhoLista strong:last-child{
+    color: var(--purple-100);
+}
+
+.cabecalhoLista .badge{
+    padding: 2px 8px;
+    background: var(--gray-400);
+    border-radius: 8px;
+    color: var(--gray-200);
+    margin-left: 0.5rem;
+}
+
+.listaTarefas .tarefa{
+    background: var(--gray-500);
+    border: 1px solid var(--gray-400);
+
+    padding: 1rem;
+
+    border-radius: 8px;
+
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-start;
+}
+
+.listaTarefas .finalizada{
+    opacity: 0.7;
+    text-decoration: line-through;
+}
+
+.listaTarefas .tarefa svg {
+    color: var(--blue-100);
+}
+
+.listaTarefas .tarefa p{
+    font-size: 0.875rem;
+    color: var(--gray-100);
+    line-height: 1;
+}
+
+.listaTarefas .tarefa button{
+    color: var(--gray-300);
+    border: none;
+    outline: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: color 0.2s;
+}
+
+.listaTarefas .tarefa button svg{
+    color: var(--gray-300);
+}
+
+.listaTarefas .tarefa button:hover{
+    color: var(--red-500);
+}
