@@ -77,6 +77,10 @@
     margin-left: 0.5rem;
 }
 
+.listaTarefas{
+    width: 100%;
+}
+
 .listaTarefas .tarefa{
     background: var(--gray-500);
     border: 1px solid var(--gray-400);
@@ -87,7 +91,25 @@
 
     display: flex;
     gap: 0.75rem;
-    justify-content: flex-start;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.listaTarefas .tarefa .infoTarefa{
+    display: flex;
+    align-items: center;
+}
+
+.listaTarefas .tarefa .infoTarefa p{
+    font-size: 0.875rem;
+    color: var(--gray-100);
+    line-height: 1;
+
+    margin-left: 0.5rem;
+}
+
+.listaTarefas .tarefa .infoTarefa svg{
+    color: var(--blue-100);
 }
 
 .listaTarefas .finalizada{
@@ -95,31 +117,44 @@
     text-decoration: line-through;
 }
 
-.listaTarefas .tarefa svg {
-    color: var(--blue-100);
-}
-
-.listaTarefas .tarefa p{
-    font-size: 0.875rem;
-    color: var(--gray-100);
-    line-height: 1;
-}
-
-.listaTarefas .tarefa button{
+.botaoRemover{
     color: var(--gray-300);
     border: none;
     outline: none;
     background: transparent;
 
     cursor: pointer;
+}
 
+.botaoRemover svg{
+    color: var(--gray-300);
+    
     transition: color 0.2s;
 }
 
-.listaTarefas .tarefa button svg{
-    color: var(--gray-300);
+.botaoRemover:hover svg{
+    color: var(--red-500);
 }
 
-.listaTarefas .tarefa button:hover{
-    color: var(--red-500);
+.listaTarefasVazia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 4rem 1.5rem;
+
+    font-size: 1rem;
+
+    border-top: 1px solid var(--gray-300);
+    border-radius: 8px;
+}
+
+.listaTarefasVazia svg{
+    margin-bottom: 1rem;
+}
+
+.listaTarefasVazia h4,
+.listaTarefasVazia p{
+    line-height: 1.4;
 }
