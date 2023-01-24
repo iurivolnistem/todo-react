@@ -81,61 +81,6 @@
     width: 100%;
 }
 
-.listaTarefas .tarefa{
-    background: var(--gray-500);
-    border: 1px solid var(--gray-400);
-
-    padding: 1rem;
-
-    border-radius: 8px;
-
-    display: flex;
-    gap: 0.75rem;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-}
-
-.listaTarefas .tarefa .infoTarefa{
-    display: flex;
-    align-items: center;
-}
-
-.listaTarefas .tarefa .infoTarefa p{
-    font-size: 0.875rem;
-    color: var(--gray-100);
-    line-height: 1;
-
-    margin-left: 0.5rem;
-}
-
-.listaTarefas .tarefa .infoTarefa svg{
-    color: var(--blue-100);
-}
-
-.listaTarefas .finalizada{
-    opacity: 0.7;
-    text-decoration: line-through;
-}
-
-.botaoRemover{
-    color: var(--gray-300);
-    border: none;
-    outline: none;
-    background: transparent;
-
-    cursor: pointer;
-}
-
-.botaoRemover svg{
-    color: var(--gray-300);
-    
-    transition: color 0.2s;
-}
-
-.botaoRemover:hover svg{
-    color: var(--red-500);
-}
-
 .listaTarefasVazia{
     display: flex;
     flex-direction: column;

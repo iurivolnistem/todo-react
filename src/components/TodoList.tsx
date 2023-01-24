@@ -1,10 +1,10 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
-import classNames from 'classnames';
 import { v4 as uuid } from 'uuid';
 import { PlusCircle, Trash, Circle, CheckCircle, ClipboardText } from 'phosphor-react';
 
 
 import styles from './TodoList.module.css';
+import { Task } from './Task';
 
 interface ITarefa{
     id: string;
@@ -95,16 +95,12 @@ export function TodoList(){
                     </div>
                     : 
                     tarefas.map(tarefa => {
-                        return(
-                        <div className={classNames(styles.tarefa, {[styles.finalizada]: tarefa.finalizada})}>
-                            <div className={styles.infoTarefa}>
-                                {tarefa.finalizada ? <CheckCircle weight="fill" color="#5e60ce" onClick={() => concluirTarefa(tarefa.id)}/> : <Circle onClick={() => concluirTarefa(tarefa.id)}/>}
-                                <p>{tarefa.name}</p>
-                            </div>
-                            <button title="Excluir tarefa" className={styles.botaoRemover} onClick={() => removerTarefaDaLista(tarefa.id)}>
-                                <Trash size={14} />
-                            </button>
-                        </div>
+                        return (
+                            <Task 
+                                tarefa={tarefa} 
+                                onRemoverTarefa={removerTarefaDaLista}
+                                onConcluirTarefa={concluirTarefa}
+                            />
                         )
                     })
                 }
